@@ -10,7 +10,7 @@ bin/llvm-lto filter=lfs diff=lfs merge=lfs -text
 bin/clang-sycl-linker filter=lfs diff=lfs merge=lfs -text
 bin/clang-linker-wrapper filter=lfs diff=lfs merge=lfs -text
 bin/llvm-c-test filter=lfs diff=lfs merge=lfs -text
-bin/clang-22 filter=lfs diff=lfs merge=lfs -text
+bin/clang-23 filter=lfs diff=lfs merge=lfs -text
 bin/c-index-test filter=lfs diff=lfs merge=lfs -text
 bin/llvm-dwarfutil filter=lfs diff=lfs merge=lfs -text
 bin/llvm-gsymutil filter=lfs diff=lfs merge=lfs -text
@@ -26,6 +26,6 @@ bin/llvm-reduce filter=lfs diff=lfs merge=lfs -text
 bin/clang-refactor filter=lfs diff=lfs merge=lfs -text
 bin/lli filter=lfs diff=lfs merge=lfs -text
 bin/llvm-lto2 filter=lfs diff=lfs merge=lfs -text
-lib/libclang-cpp.so.22.1 filter=lfs diff=lfs merge=lfs -text
-lib/libLTO.so.22.1 filter=lfs diff=lfs merge=lfs -text
-lib/libclang.so.22.1.2 filter=lfs diff=lfs merge=lfs -text
+lib/libclang-cpp.so.23.1 filter=lfs diff=lfs merge=lfs -text
+lib/libLTO.so.23.1 filter=lfs diff=lfs merge=lfs -text
+lib/libclang.so.23.1.5 filter=lfs diff=lfs merge=lfs -text

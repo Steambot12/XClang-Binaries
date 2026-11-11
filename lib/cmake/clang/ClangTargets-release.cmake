@@ -154,16 +154,6 @@ set_target_properties(clangAnalysisLifetimeSafety PROPERTIES
 list(APPEND _cmake_import_check_targets clangAnalysisLifetimeSafety )
 list(APPEND _cmake_import_check_files_for_clangAnalysisLifetimeSafety "${_IMPORT_PREFIX}/lib/libclangAnalysisLifetimeSafety.a" )
 
-# Import target "clangAnalysisScalable" for configuration "Release"
-set_property(TARGET clangAnalysisScalable APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(clangAnalysisScalable PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangAnalysisScalable.a"
-  )
-
-list(APPEND _cmake_import_check_targets clangAnalysisScalable )
-list(APPEND _cmake_import_check_files_for_clangAnalysisScalable "${_IMPORT_PREFIX}/lib/libclangAnalysisScalable.a" )
-
 # Import target "clangEdit" for configuration "Release"
 set_property(TARGET clangEdit APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clangEdit PROPERTIES
@@ -384,6 +374,56 @@ set_target_properties(clangInstallAPI PROPERTIES
 list(APPEND _cmake_import_check_targets clangInstallAPI )
 list(APPEND _cmake_import_check_files_for_clangInstallAPI "${_IMPORT_PREFIX}/lib/libclangInstallAPI.a" )
 
+# Import target "clangScalableStaticAnalysisAnalyses" for configuration "Release"
+set_property(TARGET clangScalableStaticAnalysisAnalyses APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangScalableStaticAnalysisAnalyses PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisAnalyses.a"
+  )
+
+list(APPEND _cmake_import_check_targets clangScalableStaticAnalysisAnalyses )
+list(APPEND _cmake_import_check_files_for_clangScalableStaticAnalysisAnalyses "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisAnalyses.a" )
+
+# Import target "clangScalableStaticAnalysisCore" for configuration "Release"
+set_property(TARGET clangScalableStaticAnalysisCore APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangScalableStaticAnalysisCore PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisCore.a"
+  )
+
+list(APPEND _cmake_import_check_targets clangScalableStaticAnalysisCore )
+list(APPEND _cmake_import_check_files_for_clangScalableStaticAnalysisCore "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisCore.a" )
+
+# Import target "clangScalableStaticAnalysisFrontend" for configuration "Release"
+set_property(TARGET clangScalableStaticAnalysisFrontend APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangScalableStaticAnalysisFrontend PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisFrontend.a"
+  )
+
+list(APPEND _cmake_import_check_targets clangScalableStaticAnalysisFrontend )
+list(APPEND _cmake_import_check_files_for_clangScalableStaticAnalysisFrontend "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisFrontend.a" )
+
+# Import target "clangScalableStaticAnalysisSourceTransformation" for configuration "Release"
+set_property(TARGET clangScalableStaticAnalysisSourceTransformation APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangScalableStaticAnalysisSourceTransformation PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisSourceTransformation.a"
+  )
+
+list(APPEND _cmake_import_check_targets clangScalableStaticAnalysisSourceTransformation )
+list(APPEND _cmake_import_check_files_for_clangScalableStaticAnalysisSourceTransformation "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisSourceTransformation.a" )
+
+# Import target "clangScalableStaticAnalysisTool" for configuration "Release"
+set_property(TARGET clangScalableStaticAnalysisTool APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangScalableStaticAnalysisTool PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisTool.a"
+  )
+
+list(APPEND _cmake_import_check_targets clangScalableStaticAnalysisTool )
+list(APPEND _cmake_import_check_files_for_clangScalableStaticAnalysisTool "${_IMPORT_PREFIX}/lib/libclangScalableStaticAnalysisTool.a" )
+
 # Import target "clangStaticAnalyzerCore" for configuration "Release"
 set_property(TARGET clangStaticAnalyzerCore APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clangStaticAnalyzerCore PROPERTIES
@@ -444,6 +484,16 @@ set_target_properties(clangSupport PROPERTIES
 list(APPEND _cmake_import_check_targets clangSupport )
 list(APPEND _cmake_import_check_files_for_clangSupport "${_IMPORT_PREFIX}/lib/libclangSupport.a" )
 
+# Import target "clangUnifiedSymbolResolution" for configuration "Release"
+set_property(TARGET clangUnifiedSymbolResolution APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangUnifiedSymbolResolution PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangUnifiedSymbolResolution.a"
+  )
+
+list(APPEND _cmake_import_check_targets clangUnifiedSymbolResolution )
+list(APPEND _cmake_import_check_files_for_clangUnifiedSymbolResolution "${_IMPORT_PREFIX}/lib/libclangUnifiedSymbolResolution.a" )
+
 # Import target "diagtool" for configuration "Release"
 set_property(TARGET diagtool APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(diagtool PROPERTIES
@@ -456,11 +506,11 @@ list(APPEND _cmake_import_check_files_for_diagtool "${_IMPORT_PREFIX}/bin/diagto
 # Import target "clang" for configuration "Release"
 set_property(TARGET clang APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-22"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-23"
   )
 
 list(APPEND _cmake_import_check_targets clang )
-list(APPEND _cmake_import_check_files_for_clang "${_IMPORT_PREFIX}/bin/clang-22" )
+list(APPEND _cmake_import_check_files_for_clang "${_IMPORT_PREFIX}/bin/clang-23" )
 
 # Import target "clang-format" for configuration "Release"
 set_property(TARGET clang-format APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -527,6 +577,33 @@ set_target_properties(clang-scan-deps PROPERTIES
 list(APPEND _cmake_import_check_targets clang-scan-deps )
 list(APPEND _cmake_import_check_files_for_clang-scan-deps "${_IMPORT_PREFIX}/bin/clang-scan-deps" )
 
+# Import target "clang-ssaf-analyzer" for configuration "Release"
+set_property(TARGET clang-ssaf-analyzer APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clang-ssaf-analyzer PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-ssaf-analyzer"
+  )
+
+list(APPEND _cmake_import_check_targets clang-ssaf-analyzer )
+list(APPEND _cmake_import_check_files_for_clang-ssaf-analyzer "${_IMPORT_PREFIX}/bin/clang-ssaf-analyzer" )
+
+# Import target "clang-ssaf-format" for configuration "Release"
+set_property(TARGET clang-ssaf-format APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clang-ssaf-format PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-ssaf-format"
+  )
+
+list(APPEND _cmake_import_check_targets clang-ssaf-format )
+list(APPEND _cmake_import_check_files_for_clang-ssaf-format "${_IMPORT_PREFIX}/bin/clang-ssaf-format" )
+
+# Import target "clang-ssaf-linker" for configuration "Release"
+set_property(TARGET clang-ssaf-linker APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clang-ssaf-linker PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-ssaf-linker"
+  )
+
+list(APPEND _cmake_import_check_targets clang-ssaf-linker )
+list(APPEND _cmake_import_check_files_for_clang-ssaf-linker "${_IMPORT_PREFIX}/bin/clang-ssaf-linker" )
+
 # Import target "clang-sycl-linker" for configuration "Release"
 set_property(TARGET clang-sycl-linker APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-sycl-linker PROPERTIES
@@ -566,12 +643,12 @@ list(APPEND _cmake_import_check_files_for_clang-refactor "${_IMPORT_PREFIX}/bin/
 # Import target "clang-cpp" for configuration "Release"
 set_property(TARGET clang-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-cpp PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang-cpp.so.22.1"
-  IMPORTED_SONAME_RELEASE "libclang-cpp.so.22.1"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang-cpp.so.23.1"
+  IMPORTED_SONAME_RELEASE "libclang-cpp.so.23.1"
   )
 
 list(APPEND _cmake_import_check_targets clang-cpp )
-list(APPEND _cmake_import_check_files_for_clang-cpp "${_IMPORT_PREFIX}/lib/libclang-cpp.so.22.1" )
+list(APPEND _cmake_import_check_files_for_clang-cpp "${_IMPORT_PREFIX}/lib/libclang-cpp.so.23.1" )
 
 # Import target "clang-check" for configuration "Release"
 set_property(TARGET clang-check APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -594,12 +671,12 @@ list(APPEND _cmake_import_check_files_for_clang-extdef-mapping "${_IMPORT_PREFIX
 # Import target "libclang" for configuration "Release"
 set_property(TARGET libclang APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(libclang PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang.so.22.1.2"
-  IMPORTED_SONAME_RELEASE "libclang.so.22.1"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang.so.23.1.5"
+  IMPORTED_SONAME_RELEASE "libclang.so.23.1"
   )
 
 list(APPEND _cmake_import_check_targets libclang )
-list(APPEND _cmake_import_check_files_for_libclang "${_IMPORT_PREFIX}/lib/libclang.so.22.1.2" )
+list(APPEND _cmake_import_check_files_for_libclang "${_IMPORT_PREFIX}/lib/libclang.so.23.1.5" )
 
 # Import target "offload-arch" for configuration "Release"
 set_property(TARGET offload-arch APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

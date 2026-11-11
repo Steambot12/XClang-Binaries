@@ -1,1 +1,1 @@
-based on XClang LLVM custom build\n
+based on XClang LLVM custom build
