@@ -9,7 +9,7 @@ Pre-compiled Clang Compiler binaries for Android and other platforms.
 
 XClang is a public repository providing pre-compiled binaries of the Clang compiler built on top of the LLVM Project. This repository contains ready-to-use binaries for various development purposes, particularly for Android kernel and NDK development.
 
-**Note**: This is a binaries-only distribution repository built with Polly (polyhedral loop optimizer) and ThinLTO support.
+**Note**: This repository contains pre-compiled binaries and standalone release archives built with Polly (polyhedral loop optimizer) and ThinLTO support.
 
 ## Features
 
@@ -18,6 +18,28 @@ XClang is a public repository providing pre-compiled binaries of the Clang compi
 - Complete header files for C/C++ development
 - Performance-optimized binaries (Release build, ThinLTO / LLD)
 - Ideal for Android Linux Kernel (GKI 5.10, 5.15, 6.1+) and NDK
+
+## Download & Usage (Via Curl)
+
+Anda dapat langsung mengunduh compiler archive `XClang-23.1.5-Polly.tar.gz` menggunakan `curl`:
+
+```bash
+# 1. Download tarball langsung dari repository (Git LFS)
+curl -L -o XClang-23.1.5-Polly.tar.gz https://github.com/Steambot12/XClang-Binaries/raw/xclang/XClang-23.1.5-Polly.tar.gz
+
+# Atau alternatif via media endpoint:
+# curl -L -o XClang-23.1.5-Polly.tar.gz https://media.githubusercontent.com/media/Steambot12/XClang-Binaries/xclang/XClang-23.1.5-Polly.tar.gz
+
+# 2. Ekstrak ke direktori target Anda
+mkdir -p xclang-23
+tar -xzf XClang-23.1.5-Polly.tar.gz -C xclang-23
+
+# 3. Export PATH
+export PATH="$(pwd)/xclang-23/bin:$PATH"
+
+# 4. Verifikasi instalasi
+clang --version
+```
 
 ## Package Contents
 
@@ -32,31 +54,7 @@ XClang-23.1.5-Polly.tar.gz  # Compiler binary archive
 └── lib/                   # Libraries (.a and .so runtimes)
 ```
 
-## Installation
-
-### Download
-
-Download the release archive from the [Releases page](https://github.com/Steambot12/XClang-Binaries/releases).
-
-```bash
-curl -L -o XClang-23.1.5-Polly.tar.gz https://github.com/Steambot12/XClang-Binaries/releases/download/xclangpolly-23.1.5/XClang-23.1.5-Polly.tar.gz
-tar -xzf XClang-23.1.5-Polly.tar.gz -C /path/to/xclang-23
-```
-
-### Add to PATH (Optional)
-
-```bash
-export PATH=$PATH:/path/to/xclang-23/bin
-```
-
-Or add to `~/.bashrc` or `~/.zshrc` for permanent setup:
-
-```bash
-echo 'export PATH=$PATH:/path/to/xclang-23/bin' >> ~/.bashrc
-source ~/.bashrc
-```
-
-## Usage
+## Usage Examples
 
 ### Compile C File
 
@@ -74,6 +72,21 @@ clang -O3 -mllvm -polly program.c -o output
 
 ```bash
 clang --target=aarch64-linux-gnu -O2 -o output program.c
+```
+
+### Android Kernel Build Integration
+
+```bash
+make -j$(nproc) \
+  ARCH=arm64 \
+  CC=clang \
+  LD=ld.lld \
+  AR=llvm-ar \
+  NM=llvm-nm \
+  OBJCOPY=llvm-objcopy \
+  OBJDUMP=llvm-objdump \
+  STRIP=llvm-strip \
+  CROSS_COMPILE=aarch64-linux-gnu-
 ```
 
 ## System Requirements
